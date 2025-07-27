@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css">
+<link rel="stylesheet" href="/assets/main.css">
+
+  <title>Home - DOMpile Demo</title>
+</head>
+
+<body>
+  <nav>
+  <div class="container">
+    <h1>DOMpile</h1>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/getting-started.html">Getting Started</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navList = document.querySelector('nav ul');
+  
+  navToggle.addEventListener('click', function() {
+    navList.classList.toggle('active');
+  });
+  
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!navToggle.contains(e.target) && !navList.contains(e.target)) {
+      navList.classList.remove('active');
+    }
+  });
+});
+</script>
+
+<section class="hero" data-augmented-ui="tl-clip tr-round bl-round br-clip border">
+    <h1>DOMpile</h1>
+    <p><em>Reclaim the DOM&mdash;build pages with bits, not bundles.</em></p>
+    <p>A minimalist CLI tool that restores serenity to web development. No framework, no bundler, no runtime&mdash;just plain HTML includes and head injection.</p>
+    <a href="#get-started" class="btn" data-augmented-ui="tl-round tr-round bl-clip br-clip">Get Started →</a>
+</section>
+
+  <section>
+    <h2>Why Choose DOMpile?</h2>
+    <div class="features">
+      <div class="card" data-augmented-ui="tl-clip tr-scoop both">
+        <h3>🌱 Simple Includes</h3>
+        <p>Write <code>&lt;!--#include file="header.html"--&gt;</code> - no complex template engine needed. Pure HTML simplicity.</p>
+      </div>
+      <div class="card" data-augmented-ui="tr-clip bl-clip both">
+        <h3>⚡ Head Injection</h3>
+        <p>Automatic <code>&lt;head&gt;</code> tag injection across all pages. Global styles and scripts made simple.</p>
+      </div>
+      <div class="card" data-augmented-ui="bl-clip tr-scoop both">
+        <h3>🔧 Modern CLI</h3>
+        <p>Works with Node, Bun, Deno. Supports dry-run, verbose mode, build &amp; serve with live reload.</p>
+      </div>
+      <div class="card" data-augmented-ui="tl-round br-clip both">
+        <h3>🌿 Eco-Friendly</h3>
+        <p>Minimal dependencies, no runtime overhead. Build fast, sustainable websites with a tiny footprint.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <h2>See It in Action</h2>
+    <pre class="cli" data-augmented-ui="border bl-clip br-clip tr-round">
+$ dompile build
+Processing: index.html => dist/index.html
+Injecting includes into head...
+Build complete in 114 ms
+  </pre>
+  </section>
+
+  <section>
+    <h2>Solarpunk Philosophy</h2>
+    <p>Rooted in solarpunk philosophy—a future built on joyful, sustainable simplicity. DOMpile embodies DIY technology, eco-minded design, and digital minimalism. We believe in tools that empower without overwhelming, that build without breaking.</p>
+    <div class="card" data-augmented-ui="r-scoop b-clip both" style="background: linear-gradient(135deg, var(--surface-secondary), var(--surface-primary)); margin: var(--space-8) 0;">
+      <h3>🌟 Our Vision</h3>
+      <p><strong>Technology should feel like gardening—</strong> nurturing, sustainable, and in harmony with natural patterns. Every line of code should serve a purpose, every dependency should earn its place.</p>
+    </div>
+  </section>
+
+  <section id="get-started" style="text-align:center;">
+    <a class="btn" href="getting-started.html" data-augmented-ui="tl-round tr-round bl-clip br-clip">Get Started →</a>
+  </section>
+
+  <footer>
+  <div class="container">
+    <p>Crafted with calm rebellion, as a protest to unnecessary complexity</p>
+    <p>&copy; 2025 DOMpile • <a href="https://github.com/dompile/dompile">Open Source</a> • <a href="/about.html">Philosophy</a></p>
+  </div>
+</footer>
+
+</body>
+
+</html>
