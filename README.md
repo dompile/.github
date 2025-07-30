@@ -20,23 +20,23 @@ dompile is a static site generator designed for developers who want the simplici
 
 This monorepo contains:
 
-- **[@dompile/cli](cli/)** - Core static site generator CLI
-- **[create-dompile-site](create-dompile-site/)** - Project scaffolding tool
+- **[@fwdslsh/unify](cli/)** - Core static site generator CLI
+- **[create-unify-site](create-unify-site/)** - Project scaffolding tool
 - **[starter-kit](starter-kit/)** - Template repository for new projects
-- **[vscode-extension](vscode-extension/)** - VS Code extension for dompile development
+- **[vscode-extension](vscode-extension/)** - VS Code extension for unify development
 
 ## Quick Start
 
 ```bash
 # Create a new site
-npm create dompile-site my-site
+npm create unify-site my-site
 cd my-site
 
 # Start development server
-npx dompile serve
+npx @fwdslsh/unify serve
 
 # Build for production
-npx dompile build
+npx @fwdslsh/unify build
 ```
 
 ## Example Usage
@@ -84,8 +84,8 @@ dompile follows a simple processing pipeline:
 
 ```bash
 # Clone and setup
-git clone https://github.com/your-username/dompile.git
-cd dompile/cli
+git clone https://github.com/fwdslsh/unify.git
+cd unify
 npm install
 
 # Run tests
